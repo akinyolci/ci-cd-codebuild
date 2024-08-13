@@ -1,0 +1,6 @@
+version: 0.2
+phases:
+  post_build:
+    commands:
+      - echo "Copying files to the S3 bucket..."
+      - aws s3 sync . s3://akinyolcicom --delete
